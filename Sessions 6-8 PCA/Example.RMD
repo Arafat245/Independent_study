@@ -1,0 +1,41 @@
+---
+title: "Viridis Demo"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+```{r include = FALSE}
+library(viridis)
+```
+
+The code below demonstrates two color palettes in the [viridis](https://github.com/sjmgarnier/viridis) package. Each plot displays a contour map of the Maunga Whau volcano in Auckland, New Zealand.
+
+# Viridis colors: Large header
+## Viridis colors: Medium header
+### Viridis colors: Small header
+
+```{r}
+image(volcano, col = viridis(200))
+```
+
+This is an image of a volcano. The default figure size is fig.width=7in, fig.height=5in.
+
+```{r, fig.width=8, fig.height=6}
+image(volcano, col = viridis(200))
+```
+
+This is a bigger image of a volcano. Its figure size is fig.width=8in, fig.height=6in.
+
+```{r, fig.width=6, fig.height=4}
+image(volcano, col = viridis(200))
+```
+
+This is a smaller image of a volcano. Its figure size is fig.width=6in, fig.height=4in.
+
+## Magma colors
+
+```{r}
+image(volcano, col = viridis(200, option = "magma"))
+```
